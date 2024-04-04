@@ -46,7 +46,7 @@
 		ACB30E7B2BBCD97B00F59B60 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ACB30E7A2BBCD97B00F59B60 /* FirebaseRemoteConfigSwift */; };
 		ACB30E7D2BBCD97B00F59B60 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = ACB30E7C2BBCD97B00F59B60 /* FirebaseStorage */; };
 		ACB30E7F2BBCD97B00F59B60 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = ACB30E7E2BBCD97B00F59B60 /* FirebaseStorageCombine-Community */; };
-		ACB30E812BBCDA4000F59B60 /* km.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB30E802BBCDA4000F59B60 /* km.swift */; };
+		ACB30E812BBCDA4000F59B60 /* addTransactionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB30E802BBCDA4000F59B60 /* addTransactionController.swift */; };
 		ACB30E832BBCF52100F59B60 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB30E822BBCF52100F59B60 /* TableViewController.swift */; };
 		ACB30E852BBCFAFF00F59B60 /* transactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB30E842BBCFAFF00F59B60 /* transactionTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -66,7 +66,7 @@
 		ACB30D962BBBA7A600F59B60 /* transactionDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transactionDetailsController.swift; sourceTree = "<group>"; };
 		ACB30D982BBC84CA00F59B60 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ACB30DA52BBC8B0E00F59B60 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
-		ACB30E802BBCDA4000F59B60 /* km.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = km.swift; sourceTree = "<group>"; };
+		ACB30E802BBCDA4000F59B60 /* addTransactionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addTransactionController.swift; sourceTree = "<group>"; };
 		ACB30E822BBCF52100F59B60 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		ACB30E842BBCFAFF00F59B60 /* transactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transactionTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,7 +141,7 @@
 				ACB30D942BBB96EC00F59B60 /* tabBarController.swift */,
 				ACB30D962BBBA7A600F59B60 /* transactionDetailsController.swift */,
 				ACB30DA52BBC8B0E00F59B60 /* TransactionModel.swift */,
-				ACB30E802BBCDA4000F59B60 /* km.swift */,
+				ACB30E802BBCDA4000F59B60 /* addTransactionController.swift */,
 				ACB30E822BBCF52100F59B60 /* TableViewController.swift */,
 				ACB30E842BBCFAFF00F59B60 /* transactionTableViewCell.swift */,
 			);
@@ -258,7 +258,7 @@
 				ACB30D952BBB96EC00F59B60 /* tabBarController.swift in Sources */,
 				ACB30E832BBCF52100F59B60 /* TableViewController.swift in Sources */,
 				ACB30D972BBBA7A600F59B60 /* transactionDetailsController.swift in Sources */,
-				ACB30E812BBCDA4000F59B60 /* km.swift in Sources */,
+				ACB30E812BBCDA4000F59B60 /* addTransactionController.swift in Sources */,
 				ACB30D932BBB8D9900F59B60 /* TransactionItemView.swift in Sources */,
 				ACB30D7D2BBB83CD00F59B60 /* AppDelegate.swift in Sources */,
 				ACB30D7F2BBB83CD00F59B60 /* SceneDelegate.swift in Sources */,
