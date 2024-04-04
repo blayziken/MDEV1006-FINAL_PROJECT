@@ -469,6 +469,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Save">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveBtn:" destination="36J-Mi-l8L" eventType="touchUpInside" id="V33-g9-jwh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bta-Fj-Sp2">
                                 <rect key="frame" x="230" y="583" width="93" height="35"/>
@@ -478,12 +481,20 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
                                     <color key="baseBackgroundColor" red="1" green="0.29508220219999998" blue="0.22657707069999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="clearBtn:" destination="36J-Mi-l8L" eventType="touchUpInside" id="ehB-xc-AuC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vma-9E-zg9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="4Md-Tx-2oj"/>
+                    <connections>
+                        <outlet property="amountOutlet" destination="Ar7-vo-EoB" id="zIy-WE-5lh"/>
+                        <outlet property="categoryOutlet" destination="wU5-VD-Jxd" id="0bV-NE-rxB"/>
+                        <outlet property="noteOutlet" destination="4Id-Ca-bH6" id="zPm-mr-1o2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gPT-Xu-Orc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -595,6 +606,7 @@
                     <view key="view" contentMode="scaleToFill" id="zOe-T5-AwQ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="tSh-xh-UdG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
