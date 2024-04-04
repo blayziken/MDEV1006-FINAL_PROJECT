@@ -18,9 +18,12 @@ class addTransactionController: UIViewController, UITableViewDelegate {
     
     //MARK: IB ACTIONS
     @IBAction func saveBtn(_ sender: UIButton) {
+        // CREATE FIREBASE TRANSACTION DOCUMENT
+        
     }
     
     @IBAction func clearBtn(_ sender: UIButton) {
+        // CLEAR ALL FIELDS
     }
     
 }
