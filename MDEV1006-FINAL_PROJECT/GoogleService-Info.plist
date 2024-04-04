@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyAq3C5XzyP6Xm8Rvn54OwtAhWpsELp8fwE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>335026908643</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.devblaze.MDEV1006-FINAL-PROJECT</string>
+	<key>PROJECT_ID</key>
+	<string>mdev1008-expense-tracker</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mdev1008-expense-tracker.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:335026908643:ios:8e442283c55bdadeb784d6</string>
+</dict>
+</plist>
