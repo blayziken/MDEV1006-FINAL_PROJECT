@@ -10,7 +10,6 @@ import UIKit
 
 class addTransactionController: UIViewController, UITableViewDelegate {
     
-    
     //MARK: IB OUTLETS
     @IBOutlet weak var amountOutlet: UITextField!
     @IBOutlet weak var noteOutlet: UITextField!
