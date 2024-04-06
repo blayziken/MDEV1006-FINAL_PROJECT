@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 
-class homeViewController: UIViewController, UITableViewDelegate {
+class homeViewController: UIViewController, UITableViewDelegate, UICalendarViewDelegate {
     
     @Published var transactions: [TransactionModel] = []
     var db: Firestore!
@@ -81,6 +81,10 @@ class homeViewController: UIViewController, UITableViewDelegate {
     }
 }
 
+extension ViewController: UICalendarViewDelegate {
+func calendarView(_ calendarView: UICalendarView, decorationFor dateComponents: DateComponents) -> UICalendarView.Decoration? {return nil}
+}
+
 extension homeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return transactions.count
@@ -100,7 +104,7 @@ extension homeViewController: UITableViewDataSource {
             formattedAmount = String(transaction.amount)
         }
         
-        cell.textLabel?.text = "\(formattedAmount) - \(transaction.category)"
+        cell.textLabel?.text = "CAD \(formattedAmount) - \(transaction.category)"
         return cell
     }
 }
