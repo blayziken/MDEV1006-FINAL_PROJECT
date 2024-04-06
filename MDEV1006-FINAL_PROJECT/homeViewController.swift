@@ -10,8 +10,6 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 
-import UIKit
-
 class homeViewController: UIViewController, UITableViewDelegate {
     
     @Published var transactions: [TransactionModel] = []
@@ -21,13 +19,11 @@ class homeViewController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Register custom cell class
-//        transactionTableView.register(UINib(nibName: "transactionTableViewCell", bundle: nil), forCellReuseIdentifier: "transactionCell")
-//
         transactionTableView.register(transactionTableViewCell.self, forCellReuseIdentifier: "transactionCell")
-
+        
         // Set up table view
         transactionTableView.dataSource = self
+        transactionTableView.delegate = self
         
         // FETCH TRANSACTIONS
         self.db = Firestore.firestore()
@@ -54,9 +50,19 @@ class homeViewController: UIViewController, UITableViewDelegate {
                 for document in snapshot.documents {
                     let data = document.data()
                     
-                    let amount = data["amount"] as? Int ?? 0
+                    var amount: Double = 0
+                    
+                    // handling the case where amount might be a string
+                    if let amountValue = data["amount"] {
+                        if let amountDouble = amountValue as? Double {
+                            amount = amountDouble
+                        } else if let amountString = amountValue as? String, let amountDouble = Double(amountString) {
+                            amount = amountDouble
+                        }
+                    }
+                    
                     let category = data["category"] as? String ?? ""
-                    let id = data["id"] as? String ?? ""
+                    let id = data["id"] as? String ?? "" // Firebase id
                     let note = data["note"] as? String ?? ""
                     let type = data["type"] as? String ?? ""
                     let userId = data["userId"] as? String ?? ""
@@ -80,23 +86,41 @@ extension homeViewController: UITableViewDataSource {
         return transactions.count
     }
     
+    // Display each transaction cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "transactionCell", for: indexPath)
-                let transaction = transactions[indexPath.row]
-                // Configure the cell with transaction data
-                // For example:
-                cell.textLabel?.text = "\(transaction.amount) - \(transaction.category)"
-                return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "transactionCell", for: indexPath)
+        let transaction = transactions[indexPath.row]
+    
+        let formattedAmount: String
+        if transaction.amount.truncatingRemainder(dividingBy: 1) == 0 {
+            // If the amount is an integer, remove the decimal part
+            formattedAmount = String(format: "%.0f", transaction.amount)
+        } else {
+            // If the amount is a double, keep it as is
+            formattedAmount = String(transaction.amount)
+        }
         
-//        let cell = transactionTableView.dequeueReusableCell(withIdentifier: "transactionCell", for: indexPath) as! transactionTableViewCell
-//        
-//        // Configure the cell with transaction data
-//        let transaction = transactions[indexPath.row]
-//        cell.titleLabel.text = transaction.category
-////        cell.amountLabel.text = "+CAD \(transaction.amount)"
-////        cell.dateLabel.text = transaction.date
-////        cell.jobLabel.text = transaction.category
-//        
-//        return cell
+        cell.textLabel?.text = "\(formattedAmount) - \(transaction.category)"
+        return cell
     }
 }
+
+extension homeViewController {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Cell selected at index: \(indexPath.row)")
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let selectedTransaction = transactions[indexPath.row]
+        
+        // Instantiate the detailViewController
+        let detailController = storyboard?.instantiateViewController(withIdentifier: "detailViewController") as! detailViewController
+        
+        // Set the transaction property
+        detailController.transaction = selectedTransaction
+        
+        // Push the detailViewController onto the navigation stack
+        navigationController?.pushViewController(detailController, animated: true)
+
+    }
+}
+

@@ -8,7 +8,7 @@
 import Foundation
 
 struct TransactionModel: Identifiable, Decodable, Hashable {
-    var amount: Int
+    var amount: Double
     var category: String
     var id: String
     var note: String

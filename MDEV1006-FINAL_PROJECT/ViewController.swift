@@ -23,13 +23,13 @@ class ViewController: UIViewController {
     //MARK:- ACTIONS
     
     @IBAction func loginAction(_ sender: UIButton) {
-        print("Omo")
+        print("Login called")
         let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "tabBarController") as! tabBarController
         self.navigationController?.pushViewController(storyboard, animated: true)
     }
     
     @IBAction func signUpAction(_ sender: UIButton) {
-        print("Omo2")
+        print("Sign up called")
         let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "tabBarController") as! tabBarController
         self.navigationController?.pushViewController(storyboard, animated: true)
  

@@ -8,16 +8,9 @@
 import UIKit
 
 class tabBarController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        self.navigationItem.leftBarButtonItem = nil;
         navigationItem.hidesBackButton = true
-//        self.navigationItem.hidesBackButton;
-//        
-//        [self.navigationItem.setHidesBackButton:YES]
-//        
-//        [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:[[UIView alloc] init]]];
     }
 }
