@@ -111,6 +111,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC6929262BC5F7F80097E490 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ACB30D802BBB83CD00F59B60 /* ViewController.swift */,
+				ACB30D902BBB868A00F59B60 /* homeViewController.swift */,
+				ACF8C8272BBF73C1006B7363 /* detailViewController.swift */,
+				ACB30E802BBCDA4000F59B60 /* addTransactionController.swift */,
+				ACB30E822BBCF52100F59B60 /* TableViewController.swift */,
+				ACB30D942BBB96EC00F59B60 /* tabBarController.swift */,
+				ACF8C8292BC1AE10006B7363 /* ProfileControllerViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AC6929272BC5F8060097E490 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ACB30DA52BBC8B0E00F59B60 /* TransactionModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AC6929282BC5F8130097E490 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ACB30D922BBB8D9900F59B60 /* TransactionItemView.swift */,
+				ACB30E842BBCFAFF00F59B60 /* transactionTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		ACB30D702BBB83CD00F59B60 = {
 			isa = PBXGroup;
 			children = (
@@ -130,23 +161,16 @@
 		ACB30D7B2BBB83CD00F59B60 /* MDEV1006-FINAL_PROJECT */ = {
 			isa = PBXGroup;
 			children = (
+				AC6929282BC5F8130097E490 /* Views */,
+				AC6929272BC5F8060097E490 /* Models */,
+				AC6929262BC5F7F80097E490 /* Controllers */,
 				ACB30D982BBC84CA00F59B60 /* GoogleService-Info.plist */,
 				ACB30D7C2BBB83CD00F59B60 /* AppDelegate.swift */,
 				ACB30D7E2BBB83CD00F59B60 /* SceneDelegate.swift */,
-				ACB30D802BBB83CD00F59B60 /* ViewController.swift */,
 				ACB30D822BBB83CD00F59B60 /* Main.storyboard */,
 				ACB30D852BBB83D000F59B60 /* Assets.xcassets */,
 				ACB30D872BBB83D000F59B60 /* LaunchScreen.storyboard */,
 				ACB30D8A2BBB83D000F59B60 /* Info.plist */,
-				ACB30D902BBB868A00F59B60 /* homeViewController.swift */,
-				ACB30D922BBB8D9900F59B60 /* TransactionItemView.swift */,
-				ACB30D942BBB96EC00F59B60 /* tabBarController.swift */,
-				ACB30DA52BBC8B0E00F59B60 /* TransactionModel.swift */,
-				ACB30E802BBCDA4000F59B60 /* addTransactionController.swift */,
-				ACB30E822BBCF52100F59B60 /* TableViewController.swift */,
-				ACB30E842BBCFAFF00F59B60 /* transactionTableViewCell.swift */,
-				ACF8C8272BBF73C1006B7363 /* detailViewController.swift */,
-				ACF8C8292BC1AE10006B7363 /* ProfileControllerViewController.swift */,
 			);
 			path = "MDEV1006-FINAL_PROJECT";
 			sourceTree = "<group>";
