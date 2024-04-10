@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC69292A2BC60DA20097E490 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6929292BC60DA20097E490 /* SignUpViewController.swift */; };
 		ACB30D7D2BBB83CD00F59B60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB30D7C2BBB83CD00F59B60 /* AppDelegate.swift */; };
 		ACB30D7F2BBB83CD00F59B60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB30D7E2BBB83CD00F59B60 /* SceneDelegate.swift */; };
 		ACB30D812BBB83CD00F59B60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB30D802BBB83CD00F59B60 /* ViewController.swift */; };
@@ -53,6 +54,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC6929292BC60DA20097E490 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		ACB30D792BBB83CD00F59B60 /* MDEV1006-FINAL_PROJECT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MDEV1006-FINAL_PROJECT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB30D7C2BBB83CD00F59B60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACB30D7E2BBB83CD00F59B60 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				ACB30E822BBCF52100F59B60 /* TableViewController.swift */,
 				ACB30D942BBB96EC00F59B60 /* tabBarController.swift */,
 				ACF8C8292BC1AE10006B7363 /* ProfileControllerViewController.swift */,
+				AC6929292BC60DA20097E490 /* SignUpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				ACB30D7D2BBB83CD00F59B60 /* AppDelegate.swift in Sources */,
 				ACB30D7F2BBB83CD00F59B60 /* SceneDelegate.swift in Sources */,
 				ACB30D912BBB868A00F59B60 /* homeViewController.swift in Sources */,
+				AC69292A2BC60DA20097E490 /* SignUpViewController.swift in Sources */,
 				ACF8C8282BBF73C1006B7363 /* detailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

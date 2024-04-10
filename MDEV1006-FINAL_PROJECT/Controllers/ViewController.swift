@@ -30,28 +30,28 @@ class ViewController: UIViewController {
             self.navigationController?.pushViewController(storyboard, animated: true)
         }
     
-    @IBAction func loginAction(_ sender: UIButton) {
-        print("Login called")
-        
-        guard !emailField.text!.isEmpty && !passwordField.text!.isEmpty else {
-            print("Email or password is empty")
-            return
-        }
-        
-        Auth.auth().signIn(withEmail: emailField.text!, password: passwordField.text!) { [self] result, error in
-            if error != nil {
-                print("Login error")
-                print(error!.localizedDescription)
-            }
-            
-            let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "tabBarController") as! tabBarController
-            self.navigationController?.pushViewController(storyboard, animated: true)
-        }
-    }
+//    @IBAction func loginAction(_ sender: UIButton) {
+//        print("Login called")
+//        
+//        guard !emailField.text!.isEmpty && !passwordField.text!.isEmpty else {
+//            print("Email or password is empty")
+//            return
+//        }
+//        
+//        Auth.auth().signIn(withEmail: emailField.text!, password: passwordField.text!) { [self] result, error in
+//            if error != nil {
+//                print("Login error")
+//                print(error!.localizedDescription)
+//            }
+//            
+//            let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "tabBarController") as! tabBarController
+//            self.navigationController?.pushViewController(storyboard, animated: true)
+//        }
+//    }
     
     @IBAction func signUpAction(_ sender: UIButton) {
         print("Sign up called")
-        let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "tabBarController") as! tabBarController
+        let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
         self.navigationController?.pushViewController(storyboard, animated: true)
  
     }
